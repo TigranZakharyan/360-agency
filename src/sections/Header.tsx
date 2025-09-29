@@ -20,10 +20,9 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between p-4">
-        {/* Logo/Brand (can link to the top of the page: #hero or just /) */}
-        <a href="#hero" className="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300">
+        <a href="#hero" className="text-2xl font-bold text-gray-800 hover:text-pink-400 transition duration-300">
           Logo
         </a>
 
@@ -33,7 +32,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.hash} // Use the hash for scrolling
-              className="text-gray-600 hover:text-blue-600 transition duration-300 font-medium"
+              className="text-gray-600 hover:text-pink-400 transition duration-300 font-medium"
             >
               {item.name}
             </a>

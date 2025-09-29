@@ -1,10 +1,13 @@
 import Header from "@/sections/Header";
-import Image from "next/image";
+import Hero from "@/sections/Hero";
+import Team from "@/sections/Team";
 
 export default function Home() {
   return (
     <>
       <Header />
+      <Hero />
+      <Team />
     </>
   );
 }
