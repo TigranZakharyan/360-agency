@@ -1,14 +1,11 @@
 'use client'
 import { useState } from 'react';
-// Link is imported but not strictly necessary for local anchor links (a#id), 
-// but we'll use <a> tags directly for simplicity in this case.
-import { Menu, X } from 'lucide-react'; // Example icons
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  // Anchors now use 'hash' value (e.g., #hero, #about, #services)
   { name: 'Home', hash: '#hero' }, 
-  { name: 'About', hash: '#about' },
-  { name: 'Services', hash: '#services' },
+  { name: 'Team', hash: '#team' },
+  { name: 'Plans', hash: '#plans' },
   { name: 'Contact', hash: '#contact' },
 ];
 

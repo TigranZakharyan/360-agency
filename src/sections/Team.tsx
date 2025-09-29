@@ -77,7 +77,7 @@ const Team = () => {
     const dummyText = "Donec et odio pellentesque quam volutpat commodo sed egestas. Nisl condimentum id venenatis a. Proin nibh nisl condimentum id. Dictumst vestibulum rhoncus est pellentesque elit. Condimentum vitae sapien pellentesque habitant morbi.";
     
     return (
-        <section className="h-screen flex items-center bg-white overflow-hidden py-12" id="team">
+        <section className="min-h-screen flex items-center bg-white overflow-hidden py-12" id="team">
             
             <div className="relative container mx-auto">
                 

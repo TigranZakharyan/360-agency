@@ -44,8 +44,8 @@ const Hero = () => {
                 */}
                 <ScrollReveal className="absolute bottom-4 left-1/2 -translate-x-1/2 
                                md:bottom-12 md:left-12 md:translate-x-0 
-                               bg-white p-6 md:p-12 rounded-xl shadow-2xl z-20
-                               max-w-lg w-11/12 mx-auto" direction='bottom'> 
+                               bg-white p-6 md:p-12 rounded-4xl shadow-2xl z-20
+                               max-w-lg w-11/12 mx-auto" direction='bottom'>
                     <p className="text-xs md:text-sm font-semibold uppercase tracking-widest text-gray-700 mb-4 md:mb-6">
                         OUR TEAM
                     </p>
@@ -61,7 +61,7 @@ const Hero = () => {
                     >
                         LEARN MORE
                     </button>
-                 </ScrollReveal>
+                </ScrollReveal>
 
             </div>
         </section>
