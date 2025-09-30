@@ -6,7 +6,7 @@ const Hero = () => {
     // Defines the responsive styles for the Hero section.
     return (
         // Set the overall background to white and ensure minimum screen height for positioning
-        <section className="relative bg-white min-h-screen pt-16 pb-24 md:p-0" id='hero'>
+        <section className="relative bg-white min-h-screen " id='hero'>
             {/* Main Container: Uses h-[90vh] to give the relative elements a tall canvas to work with. */}
             <div className="container h-[90vh] mx-auto flex items-center justify-center relative">
 
@@ -29,14 +29,21 @@ const Hero = () => {
                   The SVG is set to cover the container area (100% width/height of its parent 'container' div).
                   The preserveAspectRatio setting helps it scale gracefully.
                 */}
-                <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" className='m-auto absolute top-0 left-0 w-full h-full'>
-                    <path
-                        fill="#FFD6E8"
-                        d="M28.8,-46.1C38.2,-44.5,47.4,-38.5,53.8,-30.1C60.2,-21.7,63.9,-10.9,59.9,-2.3C56,6.3,44.3,12.6,36.9,19.3C29.5,26,26.3,33,20.9,43.9C15.4,54.7,7.7,69.3,-0.8,70.7C-9.3,72.1,-18.7,60.3,-31.4,53.6C-44.1,47,-60.1,45.5,-64.7,37.4C-69.3,29.3,-62.5,14.7,-62.6,-0.1C-62.8,-14.8,-69.9,-29.7,-65.9,-38.8C-61.9,-47.9,-46.7,-51.3,-33.9,-50.9C-21,-50.5,-10.5,-46.3,-0.4,-45.6C9.7,-44.9,19.4,-47.6,28.8,-46.1Z"
-                        transform="scale(1.4) translate(75 55)"
-                    />
-                    <circle cx="140" cy="150" r="20" className='fill-pink-300' />
-                </svg>
+<svg
+  viewBox="0 0 180 180"
+  xmlns="http://www.w3.org/2000/svg"
+  width="100%"
+  height="100%"
+  preserveAspectRatio="xMidYMid meet"
+  className="absolute inset-0 w-full flex items-center justify-center"
+>
+  <path
+    fill="#FFD6E8"
+    d="M28.8,-46.1C38.2,-44.5,47.4,-38.5,53.8,-30.1C60.2,-21.7,63.9,-10.9,59.9,-2.3C56,6.3,44.3,12.6,36.9,19.3C29.5,26,26.3,33,20.9,43.9C15.4,54.7,7.7,69.3,-0.8,70.7C-9.3,72.1,-18.7,60.3,-31.4,53.6C-44.1,47,-60.1,45.5,-64.7,37.4C-69.3,29.3,-62.5,14.7,-62.6,-0.1C-62.8,-14.8,-69.9,-29.7,-65.9,-38.8C-61.9,-47.9,-46.7,-51.3,-33.9,-50.9C-21,-50.5,-10.5,-46.3,-0.4,-45.6C9.7,-44.9,19.4,-47.6,28.8,-46.1Z"
+    className="scale-[1.3]  sm:translate-x-[105px] sm:translate-y-[70px] translate-x-[100px] translate-y-[90px]" 
+  />
+  <circle cx="140" cy="150" r="20" className="fill-pink-300" />
+</svg>
 
                 {/* Responsive Text Box:
                   On mobile: centered horizontally at the bottom, reduced padding, and smaller text.

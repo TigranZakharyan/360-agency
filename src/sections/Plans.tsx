@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PricingCard from '@/components/PricingCard';
 import ScrollReveal from '@/components/ScrollReveal';
 
@@ -15,6 +15,14 @@ interface Plan {
 
 const Plans: React.FC = () => {
   const [isYearly, setIsYearly] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const plans: Plan[] = [
     {
@@ -70,7 +78,10 @@ const Plans: React.FC = () => {
   ];
 
   return (
-    <section className="min-h-screen text-white bg-gradient-to-br from-purple-100 to-pink-100 flex flex-col items-center justify-center px-4 py-8" id="plans">
+    <section
+      className="min-h-screen text-white bg-gradient-to-br from-white-100 to-pink-300 flex flex-col items-center justify-center px-4 py-8"
+      id="plans"
+    >
       <div className="text-center mb-10">
         <p className="text-gray-600 uppercase text-sm tracking-widest mb-2">People Operations Platform</p>
         <h1 className="text-5xl font-bold text-gray-600">Select The Best Plan</h1>
@@ -78,9 +89,18 @@ const Plans: React.FC = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
-        {plans.map((plan, index) => (
-          <ScrollReveal key={index} distance={60} direction={index === 1 ? "top" : "bottom"}><PricingCard {...plan} isYearly={isYearly} /></ScrollReveal>
-        ))}
+        {plans.map((plan, index) => {
+          const direction = isMobile
+            ? 'bottom'
+            : index === 1
+            ? 'top'
+            : 'bottom';
+          return (
+            <ScrollReveal key={index} distance={60} direction={direction}>
+              <PricingCard {...plan} isYearly={isYearly} />
+            </ScrollReveal>
+          );
+        })}
       </div>
     </section>
   );
